@@ -1,0 +1,21 @@
+{{ define "main" }}  
+<div class="container">  
+    <div class="section">  
+        <div class="content">  
+            <h1 class="title">{{ .Title }}</h1>  
+            {{ .Content }}  
+            {{ range .Pages }}  
+            <article> 
+                <head>
+                    <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+                </head>
+                <p>{{.Date | time.Format ":date_long"}} </p>
+                <footer>
+                    {{.Description}}
+                </footer>
+            </article>
+            {{ end }}  
+        </div>  
+    </div>  
+</div>  
+{{ end }}  

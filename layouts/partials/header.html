@@ -1,0 +1,24 @@
+<div id="nav-border" class="container">
+    <nav> 
+        <ul>
+            <strong>
+                <a href="/">{{.Site.Title}}</a>
+            </strong>
+        </ul>
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li>
+                <a class="nav-link" href="{{ .URL }}">
+                    {{ if .Pre }}
+                    {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+                    {{ $icon }}
+                    {{ end }}
+                    {{ $text := print .Name | safeHTML }}
+                    {{ $text }}
+                </a>
+            </li>
+            {{ end }}
+            <i class="material-icons" id="theme-toggle">brightness_6</i>
+        </ul>
+    </nav>
+</div>
