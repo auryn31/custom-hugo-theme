@@ -1,11 +1,7 @@
-
-<script>
-  document.getElementById("theme-toggle").onclick = function toggleTheme () {
-    if(document.getElementsByTagName('html')[0].getAttribute('data-theme') === 'light') {
-      document.getElementsByTagName('html')[0].setAttribute('data-theme', 'dark')
-    } else {
-      document.getElementsByTagName('html')[0].setAttribute('data-theme', 'light')
-    }
-  }
-
-</script>
+<footer>
+  <div>
+    {{ range .Site.Menus.footer }}
+    <a href="{{ .URL}}">{{.Name}}</a>
+    {{end}}
+  </div>
+</footer>
