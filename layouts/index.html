@@ -12,7 +12,7 @@
       {{ .Title }}
     </div>
     <div>
-      {{.Date | time.Format "02.01.2006"}} <br>
+      {{.Date | time.Format .Site.Params.DateFormat }} <br>
     </div>
   </a>
   {{ end }}  

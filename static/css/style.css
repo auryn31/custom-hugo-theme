@@ -71,11 +71,16 @@ a {
   margin-bottom: 1rem;
   text-decoration: none;
   color: var(--main-font-color);
+  gap: .5rem;
 }
 .list__item div {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.list__item div:last-child {
+ text-align: right;
+ flex-grow: 1;
 }
 footer {
   display: flex;
