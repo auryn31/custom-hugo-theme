@@ -1,23 +1,23 @@
 <div id="navbar" class="container">
-    <nav> 
-        <ul>
-            <strong>
-                <a href="/">{{.Site.Title}}</a>
-            </strong>
-        </ul>
-        <ul>
-            {{ range .Site.Menus.main }}
-            <li>
-                <a class="nav-link" href="{{ .URL }}">
-                    {{ if .Pre }}
-                    {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-                    {{ $icon }}
-                    {{ end }}
-                    {{ $text := print .Name | safeHTML }}
-                    {{ $text }}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">{{.Site.Title}}</a>
+      </li>
+    </ul>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li>
+        <a class="nav-link" href="{{ .URL }}">
+          {{ if .Pre }}
+          {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+          {{ $icon }}
+          {{ end }}
+          {{ $text := print .Name | safeHTML }}
+          {{ $text }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 </div>

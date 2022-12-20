@@ -52,10 +52,6 @@ a {
 #navbar nav ul li {
   display: block;
 }
-#navbar nav ul strong a {
-  text-decoration: none;
-  color: var(--main-font-color);
-}
 #navbar nav ul li a {
   text-decoration: none;
   color: var(--main-font-color);
