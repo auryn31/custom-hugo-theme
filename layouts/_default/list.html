@@ -7,7 +7,7 @@
             {{ range .Pages }}
             <a class="list__item" href="{{.Permalink}}">
                 <div>
-                    {{ .Title }}
+                   {{ .Title }}
                 </div>
                 <div>
                     {{.Date | time.Format ":date_long"}} <br>

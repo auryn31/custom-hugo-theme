@@ -1,16 +1,20 @@
 {{ define "main" }}
 <div>
-    <h1 id="index__welcome">Welcome to my Blog</h1>
-    <h2>Articles:</h2>
-    {{ range (where .Site.RegularPages "Type" "posts") }}  
-    <a class="list__item" href="{{.Permalink}}">
-        <div>
-            {{ .Title }}
-        </div>
-        <div>
-            {{.Date | time.Format ":date_long"}} <br>
-        </div>
-    </a>
-    {{ end }}  
+  <h1 id="index__welcome">
+    {{range (split .Site.Params.description " ")}}
+    <span>{{.}}</span>
+    {{end}}
+  </h1>
+  <h2>Articles:</h2>
+  {{ range (where .Site.RegularPages "Type" "posts") }}  
+  <a class="list__item" href="{{.Permalink}}">
+    <div>
+      {{ .Title }}
+    </div>
+    <div>
+      {{.Date | time.Format ":date_long"}} <br>
+    </div>
+  </a>
+  {{ end }}  
 </div>
 {{ end }}
